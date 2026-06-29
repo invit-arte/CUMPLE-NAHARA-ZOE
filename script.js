@@ -2,6 +2,7 @@ const sealButton = document.getElementById("sealButton");
 const envelopeScreen = document.getElementById("envelopeScreen");
 const mainPage = document.getElementById("mainPage");
 const magicFlash = document.getElementById("magicFlash");
+const heroVideo = document.getElementById("heroVideo");
 
 let opened = false;
 
@@ -18,9 +19,10 @@ sealButton.addEventListener("click", () => {
   }, 900);
 
   setTimeout(() => {
-    envelopeScreen.classList.add("hide");
-    mainPage.classList.add("show");
-  }, 1250);
+  envelopeScreen.classList.add("hide");
+  mainPage.classList.add("show");
+  heroVideo.play();
+}, 1250);
 
   setTimeout(() => {
     envelopeScreen.style.display = "none";
